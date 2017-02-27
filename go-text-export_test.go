@@ -16,7 +16,7 @@ func TestExport(t *testing.T) {
      This book is a treatise on the theory of ethics, very popular during the Renaissance.
      The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
     `
-	res := Create(str).Export(100).SetMoreText(" more..").RemoveWhiteSpace().String()
+	res := Create(str).Export(100).SetMoreText("more..").RemoveWhiteSpace().String()
 	log.Print(res)
 }
 
@@ -31,7 +31,7 @@ func TestTextExport_Len(t *testing.T) {
      This book is a treatise on the theory of ethics, very popular during the Renaissance.
      The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
     `
-	res := Create(str).Export(100).Len()
+	res := Create(str).Export(100).SetMoreUrl("https://example.com/1")
 	log.Print(res)
 }
 

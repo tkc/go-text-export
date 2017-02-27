@@ -12,6 +12,7 @@ const moreStr = "..."
 type TextExport struct {
 	Str     string
 	moreStr string
+	moreUrl string
 }
 
 func Create(str string) *TextExport {
@@ -22,6 +23,12 @@ func (te *TextExport) SetMoreText(moreStr string) *TextExport {
 	te.moreStr = moreStr
 	return te
 }
+
+func (te *TextExport) SetMoreUrl(moreUrl string) *TextExport {
+	te.moreUrl = moreUrl
+	return te
+}
+
 func (te *TextExport) RemoveMoreText() *TextExport {
 	te.moreStr = ""
 	return te
@@ -86,7 +93,12 @@ func (te *TextExport)Prepare(num int) *TextExport {
 }
 
 func (te *TextExport)String() string {
-	return te.Str + te.moreStr
+
+	if te.moreUrl != "" {
+		return te.Str + " " + "<a href='" + te.moreUrl + "'>" + te.moreStr + "</>"
+	} else {
+		return te.Str + " " + te.moreStr
+	}
 }
 
 func (te *TextExport)Len() int {
