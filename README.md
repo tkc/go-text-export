@@ -17,24 +17,23 @@ Text
 ```
 Contrary to popular belief, Lorem Ipsum is not simply random text.
 It has roots in a piece of classical Latin literature from 45 BC,
+
+==>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of  more..
 ```
+
 
 Code
 ```go
 go_text_export.Create(Str).Export(100).SetMoreText(" more..").RemoveWhiteSpace().String()
 ```
 
-Result
-```
-Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of  more..
-```
-
 ## SetMoreUrl
 
-Text
 ```
 Contrary to popular belief, Lorem Ipsum is not simply random text.
 It has roots in a piece of classical Latin literature from 45 BC,
+
+==>Contrary to popular belie <a href='https://example.com/1'>more..</>
 ```
 
 Code
@@ -42,17 +41,12 @@ Code
 go_text_export.Create(str).Export(30).SetMoreText("more..").SetMoreUrl("https://example.com/1")
 ```
 
-Result
-```
-Contrary to popular belie <a href='https://example.com/1'>more..</>
-```
-
 ## ConvertHtmlLink
 
-
-Text
 ```
 link https://example.com
+
+==>link  <a href=https://example.com>https://example.com</a>
 ```
 
 Code
@@ -60,10 +54,6 @@ Code
 go_text_export.Create(Str).ConvertHtmlLink().String()
 ```
 
-Result
-```
-link  <a href=https://example.com>https://example.com</a>
-```
 
 ## More
 ```go
