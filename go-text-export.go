@@ -65,8 +65,8 @@ func (te *TextExport) ConvertHtmlBrTag() *TextExport {
 func (te *TextExport)Export(num int) *TextExport {
 	te.Str = te.RemoveNewLine().Str // TODO
 	if (utf8.RuneCountInString(te.Str) > num) {
-		regSte := fmt.Sprintf(`^(.){%d}`, num)
-		r := regexp.MustCompile(regSte)
+		regStr := fmt.Sprintf(`^(.){%d}`, num)
+		r := regexp.MustCompile(regStr)
 		result := r.FindAllStringSubmatch(te.Str, -1)
 		te.Str = result[0][0]
 		return te
