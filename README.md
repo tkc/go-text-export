@@ -29,6 +29,24 @@ Result
 Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of  more..
 ```
 
+## SetMoreUrl
+
+Text
+```
+Contrary to popular belief, Lorem Ipsum is not simply random text.
+It has roots in a piece of classical Latin literature from 45 BC,
+```
+
+Code
+```go
+go_text_export.Create(str).Export(30).SetMoreText("more..").SetMoreUrl("https://example.com/1")
+```
+
+Result
+```
+Contrary to popular belie <a href='https://example.com/1'>more..</>
+```
+
 ## ConvertHtmlLink
 
 
