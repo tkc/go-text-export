@@ -32,7 +32,7 @@ go_text_export.Create(Str).Export(100).SetMoreText(" more..").RemoveWhiteSpace()
 Contrary to popular belief, Lorem Ipsum is not simply random text.
 It has roots in a piece of classical Latin literature from 45 BC,
 
-==>Contrary to popular belie <a href='https://example.com/1'>more..</>
+==>Contrary to popular belie <a href='https://example.com/1'>more..</a>
 ```
 
 Code
