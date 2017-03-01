@@ -23,7 +23,7 @@ It has roots in a piece of classical Latin literature from 45 BC,
 
 Code
 ```go
-go_text_export.Create(Str).Export(100).SetMoreText(" more..").RemoveWhiteSpace().String()
+go_text_export.Create(Str).SetMoreText(" more..").Export(100).RemoveWhiteSpace().String()
 ```
 
 ## SetMoreUrl
@@ -37,7 +37,7 @@ It has roots in a piece of classical Latin literature from 45 BC,
 
 Code
 ```go
-go_text_export.Create(str).Export(30).SetMoreText("more..").SetMoreUrl("https://example.com/1")
+go_text_export.Create(str).SetMoreText("more..").Export(30).SetMoreUrl("https://example.com/1")
 ```
 
 ## ConvertHtmlLink
@@ -53,11 +53,23 @@ Code
 go_text_export.Create(Str).ConvertHtmlLink().String()
 ```
 
-
-## More
+## More Sample
 ```go
 go_text_export.Create(Str).ConvertHtmlBrTag().String()
 go_text_export.Create(Str).RemoveWhiteSpace().String()
 go_text_export.Create(Str).Prepare(100).String()
 
+```
+
+## Method List
+```go
+Export
+Prepare
+ConvertHtmlLink
+ConvertHtmlBrTag
+RemoveWhiteSpace
+RemoveNewLine
+SetMoreText
+SetMoreUrl
+String
 ```
