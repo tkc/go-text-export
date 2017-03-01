@@ -95,9 +95,9 @@ func (te *TextExport)Prepare(num int) *TextExport {
 func (te *TextExport)String() string {
 
 	if te.moreUrl != "" {
-		return te.Str + " " + "<a href='" + te.moreUrl + "'>" + te.moreStr + "</a>"
+		return te.Str + "<a href='" + te.moreUrl + "'>" + te.moreStr + "</a>"
 	} else {
-		return te.Str + " " + te.moreStr
+		return te.Str + te.moreStr
 	}
 }
 
