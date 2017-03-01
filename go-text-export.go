@@ -84,7 +84,7 @@ func (te *TextExport)Prepare(num int) *TextExport {
 	if shortage < 0 {
 		te.Str = te.RemoveNewLine().Str // TODO
 		for i := 0; i < shortage * -1; i++ {
-			te.Str = te.Str + " "
+			te.Str = te.Str + "&nbsp;"
 		}
 		return te
 	} else {
